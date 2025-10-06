@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon Sign Quote Section</title>
+  <style>
+    
+  /* Basic reset for better consistency */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+/* Global container styling */
+body > div { /* This targets the outermost div that wraps all content */
+    background: #000;
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* Top Heading */
+body > div > div:nth-child(1) { /* Adjust selector if structure changes */
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 24px;
+    font-weight: bold;
+    max-width: 1700px;
+    margin: 0 auto;
+}
+
+/* Section with form and image */
+body > div > div:nth-child(2) { /* Adjust selector if structure changes */
+    background: #000;
+    color: #fff;
+    padding: 60px 20px;
+}
+
+body > div > div:nth-child(2) > div { /* Inner flex container */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1700px;
+    margin: auto;
+    gap: 60px;
+}
+
+/* Left side image in form section */
+body > div > div:nth-child(2) > div > div:nth-child(1) {
+    flex: 1 1 600px;
+    max-width: 800px;
+}
+
+body > div > div:nth-child(2) > div > div:nth-child(1) img {
+    width: 100%;
+    height: 600px;
+    border-radius: 16px;
+}
+
+/* Right side form container */
+body > div > div:nth-child(2) > div > div:nth-child(2) {
+    flex: 1 1 450px;
+    max-width: 800px;
+    height: max-content;
+    background: #111;
+    border: 2px solid #f0f;
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 0 20px #f0f;
+    color: #fff;
+}
+
+body > div > div:nth-child(2) > div > div:nth-child(2) h2 {
+    font-size: 26px;
+    line-height: 1.3;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+body > div > div:nth-child(2) > div > div:nth-child(2) p {
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+body > div > div:nth-child(2) > div > div:nth-child(2) label {
+    color: #fff;
+}
+
+body > div > div:nth-child(2) > div > div:nth-child(2) input[type="text"],
+body > div > div:nth-child(2) > div > div:nth-child(2) input[type="email"],
+body > div > div:nth-child(2) > div > div:nth-child(2) textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: #222;
+    color: #fff;
+}
+
+/* Placeholder styling */
+input::placeholder {
+    color: #bbb;
+    opacity: 1;
+}
+
+/* Color box selection */
+#color-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.color-box {
+    width: 45px;
+    height: 35px;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid transparent; /* default */
+    transition: border 0.2s ease-in-out;
+}
+
+.color-box[data-name="Pink"] { background: #ff007f; }
+.color-box[data-name="Yellow"] { background: #ff0; }
+.color-box[data-name="Green"] { background: #0f0; }
+.color-box[data-name="Cyan"] { background: #0ff; }
+.color-box[data-name="Magenta"] { background: #f0f; }
+.color-box[data-name="Purple"] { background: #6633ff; }
+.color-box[data-name="White"] { background: #fff; border: 1px solid #ccc; }
+.color-box[data-name="Orange"] { background: #ffa500; }
+.color-box[data-name="Blanched Almond"] { background: #ffebcd; }
+.color-box[data-name="Dark Blue"] { background: #0033cc; }
+.color-box[data-name="Teal"] { background: #2db3a3; }
+.color-box[data-name="Rainbow"] { background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); }
+
+.color-box.selected {
+    border: 3px solid white;
+    box-sizing: border-box;
+}
+
+.color-box:hover::after {
+    content: attr(data-name);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #222;
+    color: #fff;
+    padding: 3px 7px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 12px;
+    pointer-events: none;
+    opacity: 0.9;
+    margin-bottom: 6px;
+    z-index: 10;
+}
+
+.selected-label {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #222;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    z-index: 20;
+    pointer-events: none;
+}
+
+/* Submit button */
+.submit-button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #ff00cc, #3333ff);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 0 10px #f0f;
+    cursor: pointer;
+}
+
+/* Service blocks section */
+body > div > div:nth-child(3) { /* Adjust selector if structure changes */
+    background: linear-gradient(to right, #2e1c4a, #511c1c);
+    padding: 30px 20px;
+}
+
+body > div > div:nth-child(3) > div { /* Inner flex container */
+    max-width: 1700px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+body > div > div:nth-child(3) > div > div {
+    display: flex;
+    align-items: center;
+    color: white;
+    flex: 1 1 200px;
+}
+
+body > div > div:nth-child(3) > div > div img {
+    height: 40px;
+    margin-right: 10px;
+    width: 25%;
+}
+
+body > div > div:nth-child(3) > div > div div {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* Proposal visualization section */
+body > div > div:nth-child(4) { /* Adjust selector if structure changes */
+    background: #000;
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+body > div > div:nth-child(4) > div { /* Inner flex container */
+    max-width: 1700px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+}
+
+body > div > div:nth-child(4) > div > img { /* Arrow image */
+    position: absolute;
+    top: -20px;
+    left: 180px; /* This was left: -30px previously, adjusted to match your latest HTML */
+    max-width: 450px;
+    z-index: 10;
+}
+
+body > div > div:nth-child(4) > div > div:nth-child(2) { /* Left side text */
+    flex: 1 1 450px;
+    padding-top: 150px;
+}
+
+body > div > div:nth-child(4) > div > div:nth-child(2) h3 {
+    color: #d6ff00;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+body > div > div:nth-child(4) > div > div:nth-child(2) ul {
+    color: #ccc;
+    font-size: 16px;
+    line-height: 1.8;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+body > div > div:nth-child(4) > div > div:nth-child(2) ul strong {
+    color: #d6ff00;
+}
+
+body > div > div:nth-child(4) > div > div:nth-child(3) { /* Right side image */
+    flex: 1 1 600px;
+    text-align: center;
+}
+
+body > div > div:nth-child(4) > div > div:nth-child(3) img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 12px;
+}
+
+/* Our Collection section */
+body > div > div:nth-child(5) { /* Adjust selector if structure changes */
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+body > div > div:nth-child(5) h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    padding-top: 10px;
+    max-width: 1700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body > div > div:nth-child(5) > div { /* Grid container for collection items */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 20px;
+    max-width: 1700px;
+    margin: 0 auto;
+}
+
+body > div > div:nth-child(5) > div > div { /* Individual collection item */
+    flex: 1;
+    max-width: 25%; /* To ensure 4 items per row */
+}
+
+body > div > div:nth-child(5) > div > div img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+body > div > div:nth-child(5) > div > div div:nth-of-type(1) { /* Product name */
+    margin-top: 10px;
+}
+
+body > div > div:nth-child(5) > div > div div:nth-of-type(2) { /* Price */
+    color: #ccff00;
+    font-weight: bold;
+}
+
+body > div > div:nth-child(5) > div > div div:nth-of-type(3) { /* Color dots */
+    margin-top: 8px;
+}
+
+body > div > div:nth-child(5) > div > div div:nth-of-type(3) span {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+/* Specific color dots (adjust as needed for specific colors) */
+body > div > div:nth-child(5) > div > div:nth-child(1) div:nth-of-type(3) span:nth-child(1) { background: red; }
+body > div > div:nth-child(5) > div > div:nth-child(1) div:nth-of-type(3) span:nth-child(2) { background: green; }
+body > div > div:nth-child(5) > div > div:nth-child(1) div:nth-of-type(3) span:nth-child(3) { background: blue; }
+
+body > div > div:nth-child(5) > div > div:nth-child(2) div:nth-of-type(3) span:nth-child(1) { background: pink; }
+body > div > div:nth-child(5) > div > div:nth-child(2) div:nth-of-type(3) span:nth-child(2) { background: purple; }
+
+body > div > div:nth-child(5) > div > div:nth-child(3) div:nth-of-type(3) span:nth-child(1) { background: yellow; }
+body > div > div:nth-child(5) > div > div:nth-child(3) div:nth-of-type(3) span:nth-child(2) { background: blue; }
+
+body > div > div:nth-child(5) > div > div:nth-child(4) div:nth-of-type(3) span:nth-child(1) { background: pink; }
+body > div > div:nth-child(5) > div > div:nth-child(4) div:nth-of-type(3) span:nth-child(2) { background: red; }
+
+
+/* Section with image and text aligned left/right */
+body > div > div:nth-child(6) { /* Adjust selector if structure changes */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: #000;
+    padding: 40px 20px;
+}
+
+body > div > div:nth-child(6) > div:nth-child(1) { /* Left image container */
+    flex: 1 1 60%;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto; /* Center within its flexible space */
+}
+
+body > div > div:nth-child(6) > div:nth-child(1) > div {
+    width: 100%;
+    height: 400px;
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+}
+
+body > div > div:nth-child(6) > div:nth-child(1) > div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 0;
+    margin: 0;
+}
+
+body > div > div:nth-child(6) > div:nth-child(2) { /* Right text container */
+    flex: 1 1 40%;
+    padding: 20px;
+    color: white;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto; /* Center within its flexible space */
+}
+
+body > div > div:nth-child(6) > div:nth-child(2) h2 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+
+/* "WHAT YOU GET IN YOUR BOX" section */
+body > div > div:nth-child(7) { /* Adjust selector if structure changes */
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1700px;
+    margin: 0 auto;
+}
+
+body > div > div:nth-child(7) h2 {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    width: 100%;
+}
+
+body > div > div:nth-child(7) img {
+    width: 40%;
+    height: 60%;
+    object-fit: cover;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+body > div > div:nth-child(7) button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1;
+}
+
+/* Reviews section (replicated for two distinct sections in your HTML) */
+/* The final section with the "Your name deserves to glow" text and clipped image */
+body > div > div:nth-child(8) { /* Adjust selector if structure changes */
+    background-color: #000;
+    color: #fff;
+    min-height: 400px;
+    padding: 0 20px;
+}
+
+body > div > div:nth-child(8) > div { /* Inner flex container */
+    max-width: 1700px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+body > div > div:nth-child(8) > div > div:nth-child(1) { /* Left text container */
+    flex: 1;
+    flex-basis: 40%;
+    padding: 40px 0; /* Adjusted padding as per previous discussion */
+}
+
+body > div > div:nth-child(8) > div > div:nth-child(1) h2 {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+body > div > div:nth-child(8) > div > div:nth-child(1) a {
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+body > div > div:nth-child(8) > div > div:nth-child(1) button {
+    background: transparent;
+    border: 0px;
+}
+
+body > div > div:nth-child(8) > div > div:nth-child(2) { /* Right image container */
+    flex: 1;
+    flex-basis: 60%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: max-content;
+}
+
+body > div > div:nth-child(8) > div > div:nth-child(2) > div {
+    width: 100%;
+    max-width: 950px;
+    height: 400px;
+    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+    overflow: hidden;
+}
+
+body > div > div:nth-child(8) > div > div:nth-child(2) > div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Footer */
+footer {
+    background: linear-gradient(90deg, #ea4c89, #9b4bda);
+    color: white;
+    padding: 60px 40px;
+    font-family: sans-serif;
+}
+
+footer > div:nth-child(1) { /* Logo container */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+footer > div:nth-child(1) img {
+    width: 70px;
+    margin: 0 auto;
+}
+
+footer > div:nth-child(1) h2 {
+    margin: 10px 0 0;
+}
+
+footer > div:nth-child(2) { /* Grid layout for links */
+    display: flex;
+    justify-content: space-between;
+    max-width: 1700px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+footer > div:nth-child(2) > div { /* Individual columns */
+    flex: 1;
+    min-width: 200px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    line-height: 2;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer p:nth-of-type(1) { /* "Sign up and save" */
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+footer input[type="email"] {
+    margin-top: 10px;
+    padding: 8px;
+    width: 100%;
+    max-width: 220px;
+    border: none;
+    border-radius: 4px;
+    background: white;
+    color: black;
+}
+
+footer > div:nth-child(2) > div:nth-child(4) > div { /* Social icons */
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    font-size: 18px;
+}
+
+footer > div:nth-child(3) { /* Currency switcher */
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+/* Specific styles from your previous CSS which are not inline */
+.reviews-container {
+    max-width: 2000px;
+    margin: 2rem auto;
+    background-color: white;
+    padding-bottom: 30px;
+    padding-top: 1px;
+}
+
+.reviews-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 5rem;
+}
+
+.rating-summary {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stars {
+    color: yellow;
+    font-size: 1.2rem;
+}
+
+.review-count {
+    color: #000000;
+    font-size: 0.9rem;
+}
+
+.filter-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.filter-button:hover {
+    color: #333;
+}
+
+
+
+
+
+  </style>
+</head>
+<body>
+<div>
+  <div>
+    GET THE PERFECT NEON SIGN TO LIGHT UP YOUR NAME IN STYLE!
+  </div>
+
+  <div class="form-section">
+    <div>
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/0751/8771/6322/files/Annotation_2025-05-31_031719.png?v=1748690867" alt="Neon Sign Gallery" />
+      </div>
+
+      <div>
+        <h2>Claim Your 20% Discount By Requesting A Quote Today!</h2>
+        <p>Submit the form to get a proposal on your email!</p>
+
+        <form id="quoteForm" onsubmit="submitForm(event)">
+          <label for="name">Name *</label><br />
+          <input type="text" id="name" name="name" placeholder="Full Name" /><br />
+
+          <label for="email">Email *</label><br />
+          <input type="email" id="email" name="email" placeholder="example@email.com" /><br />
+
+          <label for="text">Enter Your Text</label><br />
+          <textarea id="text" name="text" placeholder="Custom text here" rows="3"></textarea><br />
+
+          <label style="display: block; margin-bottom: 8px;">Color Name</label>
+          <input type="hidden" id="selectedColor" name="color" />
+
+          <div id="color-container">
+            <div class="color-box" data-name="Pink" style="background: #ff007f;"></div>
+            <div class="color-box" data-name="Yellow" style="background: #ff0;"></div>
+            <div class="color-box" data-name="Green" style="background: #0f0;"></div>
+            <div class="color-box" data-name="Cyan" style="background: #0ff;"></div>
+            <div class="color-box" data-name="Magenta" style="background: #f0f;"></div>
+            <div class="color-box" data-name="Purple" style="background: #6633ff;"></div>
+            <div class="color-box" data-name="White" style="background: #fff; border: 1px solid #ccc;"></div>
+            <div class="color-box" data-name="Orange" style="background: #ffa500;"></div>
+            <div class="color-box" data-name="Blanched Almond" style="background: #ffebcd;"></div>
+            <div class="color-box" data-name="Dark Blue" style="background: #0033cc;"></div>
+            <div class="color-box" data-name="Teal" style="background: #2db3a3;"></div>
+            <div class="color-box" data-name="Rainbow" style="background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);"></div>
+          </div>
+
+          <button type="submit" class="submit-button">GET FREE QUOTES & MOCKUPS</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="services-section">
+    <div>
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/0751/8771/6322/files/2.1.png?v=1748690986" alt="24/7 Support" />
+        <div>
+          <strong>24/7 CUSTOMER</strong><br /> SUPPORT
+        </div>
+      </div>
+
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/0751/8771/6322/files/2.2.png?v=1748690986" alt="Free Shipping" />
+        <div>
+          <strong>FREE WORLDWIDE</strong><br /> SHIPPING
+        </div>
+      </div>
+
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/0751/8771/6322/files/2.3.png?v=1748690986" alt="Turnaround" />
+        <div>
+          <strong>QUICK</strong><br /> TURNAROUND
+        </div>
+      </div>
+
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/0751/8771/6322/files/2.4.png?v=1748690986" alt="Money Back" />
+        <div>
+          <strong>30 DAYS MONEY BACK</strong><br /> GUARANTEE
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="proposal-section">
+    <div>
+      <img src="https://cdn.shopify.com/s/files/1/0751/8771/6322/files/Group_1000004627_1.png?v=1748837590" alt="Your Proposal Visualized" />
+
+      <div>
+        <h3>SEE WHAT YOU’LL RECEIVE AFTER SENDING YOUR INQUIRY</h3>
+
+        <ul>
+          <li><strong>Multiple Mockups</strong> – Find the perfect design.</li>
+          <li><strong>Strip Colors</strong> – Choose from a wide range.</li>
+          <li><strong>Back Shapes</strong> – Customize to match your style.</li>
+          <li><strong>Technical Specs</strong> – All the details you need.</li>
+          <li><strong>And More</strong> – Craft your product with ease.</li>
+        </ul>
+      </div>
+
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/0751/8771/6322/files/Group_1000004626_2.png?v=1748837591" alt="Proposal Visuals" />
+      </div>
+    </div>
+  </div>
+
+  <div class="collection-section">
+    <h2>OUR COLLECTION</h2>
+
+    <div>
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/0751/8771/6322/files/4.4.jpg?v=1748690866" alt="Smile Neon Sign" />
+        <div>Smile Neon Sign</div>
+        <div>From 114.99</div>
+        <div>
+          <span style="background: red;"></span>
+          <span style="background: green;"></span>
+          <span style="background: blue;"></span>
+        </div>
+      </div>
+
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/0751/8771/6322/files/4.2.jpg?v=1748690866" alt="Baby Astronaut Neon Sign" />
+        <div>Baby Astronaut Neon Sign</div>
+        <div>From 114.99</div>
+        <div>
+          <span style="background: pink;"></span>
+          <span style="background: purple;"></span>
+        </div>
+      </div>
+
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/0751/8771/6322/files/4.3.jpg?v=1748690867" alt="Cocomelon Neon Sign" />
+        <div>Cocomelon Neon Sign</div>
+        <div>From 149.99</div>
+        <div>
+          <span style="background: yellow;"></span>
+          <span style="background: blue;"></span>
+        </div>
+      </div>
+
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/0751/8771/6322/files/6.png?v=1748690867" alt="Unicorn Neon Sign" />
+        <div>Unicorn Neon Sign</div>
+        <div>From 134.99</div>
+        <div>
+          <span style="background: pink;"></span>
+          <span style="background: red;"></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="olivia-section">
+    <div>
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/0751/8771/6322/files/7a6405e3771616999db5b82ddab19447c2dc3136.jpg?v=1748690867" alt="Olivia Neon Sign" />
+      </div>
+    </div>
+
+    <div>
+      <h2>
+        Your name deserves to glow in bright colors for the world to see it shine!
+      </h2>
+    </div>
+  </div>
+    
+  <div class="box-content-section">
+    <h2>WHAT YOU GET IN YOUR BOX</h2>
+    <img src="https://cdn.shopify.com/s/files/1/0751/8771/6322/files/image.png?v=1748838092" alt="Full Size Image">
+    <button>GET A FREE QOUTE</button>
+  </div>
+
+  <div class="reviews-section">
+    <div>
+      <div class="reviews-text-column">
+        <h2>
+          Your name deserves to glow in bright colors for the world to see it shine!
+        </h2>
+        <a href="landing.html">
+          <button>GET A FREE QUOTE </button>
+        </a>
+      </div>
+
+      <div class="reviews-image-column">
+        <div>
+          <img src="https://cdn.shopify.com/s/files/1/0751/8771/6322/files/69d328959edbec834d1c9c289f345b101e024187.jpg?v=1748690867" alt="Neon Sign" />
+        </div>
+      </div>
+    </div>
+  </div>
+<elevenlabs-convai agent-id="agent_1801k6mprs28e59vt6rg1z6hq7e7"></elevenlabs-convai>
+  <footer>
+    <div>
+      <img src="https://cdn.shopify.com/s/files/1/0751/8771/6322/files/Layer_69.png?v=1748321314" alt="Logo" />
+      <h2>WESTNINTH<br />VINTAGE</h2>
+    </div>
+
+    <div>
+      <div>
+        <ul>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>FAQ</li>
+          <li>Refund Policy</li>
+          <li>Privacy</li>
+          <li>Terms & Condition</li>
+        </ul>
+      </div>
+
+      <div>
+        <ul>
+          <li>Create Your Own</li>
+          <li>Upload Your Logo</li>
+          <li>Mini Neon Sale</li>
+          <li>Shop All</li>
+          <li>Track Your Order</li>
+        </ul>
+      </div>
+
+      <div>
+        <ul>
+          <li>>30 N Gould St</li>
+          <li>Sheridan WY 82801</li>
+          <li>United States</li>
+        </ul>
+      </div>
+
+      <div>
+        <p>Sign up and save</p>
+        <p>+307-222-3161</p>
+        <p>info@westninthvintage.com</p>
+        <input type="email" placeholder="Enter your email">
+        <div>
+          <span>📷</span>
+          <span>📘</span>
+          <span>▶️</span>
+          <span>🐦</span>
+          <span>🎵</span>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      🇵🇰 Pakistan (PKR ₨) ▼
+    </div>
+  </footer>
+</div>
+
+<script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"> </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const colorBoxes = document.querySelectorAll('.color-box');
+        const selectedColorInput = document.getElementById('selectedColor');
+
+        colorBoxes.forEach(box => {
+            box.addEventListener('click', () => {
+                colorBoxes.forEach(b => b.classList.remove('selected'));
+                
+                box.classList.add('selected');
+             
+                selectedColorInput.value = box.dataset.name;
+            });
+        });
+    });
+
+  
+    function submitForm(event) {
+        event.preventDefault();
+        alert('Form submitted! (This is a dummy function)');
+        // console.log({
+        //     name: document.getElementById('name').value,
+        //     email: document.getElementById('email').value,
+        //     text: document.getElementById('text').value,
+        //     color: document.getElementById('selectedColor').value
+        // });
+    }
+
+    const AGENT_ID = 'agent_1801k6mprs28e59vt6rg1z6hq7e7';
+
+const OPEN_IN_NEW_TAB = true; 
+
+
+const WIDGET_POSITION = 'bottom-right'; 
+
+const BASE_URL = 'http://127.0.0.1:5500/'; 
+
+function injectElevenLabsWidget() {
+  const ID = 'elevenlabs-convai-widget';
+  
+  if (document.getElementById(ID)) {
+    return;
+  }
+
+  const script = document.createElement('script');
+  script.src = 'https://unpkg.com/@elevenlabs/convai-widget-embed';
+  script.async = true;
+  script.type = 'text/javascript';
+  document.head.appendChild(script);
+
+  const wrapper = document.createElement('div');
+  wrapper.className = `convai-widget ${WIDGET_POSITION}`;
+
+  const widget = document.createElement('elevenlabs-convai');
+  widget.id = ID;
+  widget.setAttribute('agent-id', AGENT_ID);
+  widget.setAttribute('variant', 'full');
+
+
+  widget.addEventListener('elevenlabs-convai:call', (event) => {
+    event.detail.config.clientTools = {
+      Mockup_Quote: ({ url }) => {
+        console.log('redirectToExternalURL called with url:', url);
+        
+        let fullUrl = url;
+        if (!url.startsWith('http')) {
+         
+          const baseUrl = BASE_URL || window.location.origin + window.location.pathname.replace(/\/[^\/]*$/, '');
+          fullUrl = `${baseUrl}${url.startsWith('/') ? '' : '/'}${url}`;
+        }
+        
+        console.log('Navigating to:', fullUrl);
+     
+        if (OPEN_IN_NEW_TAB) {
+          window.open(fullUrl, '_blank', 'noopener,noreferrer');
+        } else {
+          window.location.href = fullUrl;
+        }
+      },
+    };
+  });
+
+  wrapper.appendChild(widget);
+  document.body.appendChild(wrapper);
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', injectElevenLabsWidget);
+} else {
+  injectElevenLabsWidget();
+}
+</script>
+</body>
+</html>
