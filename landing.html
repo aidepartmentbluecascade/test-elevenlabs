@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Signage Quote</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="announcement">SHIPS WITHIN 3 DAYS!</div>
+    <h1>UPLOAD YOUR LOGO FOR FREE BUSINESS SIGN MOCKUP & QUOTE</h1>
+    
+     <div class="carousel-wrapper">
+      <button class="carousel-btn prev">&#8592;</button>
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <div class="carousel-item">
+            <span class="badge">3D ILLUMINATED</span>
+            <img src="images/download (1).jpg" alt="3D Illuminated">
+          </div>
+          <div class="carousel-item">
+            <span class="badge">3D FRONTLIT</span>
+            <img src="images/download (2).jpg" alt="3D Frontlit">
+          </div>
+          <div class="carousel-item">
+            <span class="badge">2D METAL</span>
+            <img src="images/download (2).jpg" alt="2D Metal">
+          </div>
+          <div class="carousel-item">
+            <span class="badge">ACRYLIC SIGN</span>
+            <img src="images/download (1).jpg" alt="Acrylic Sign">
+          </div>
+          <div class="carousel-item">
+            <span class="badge">ACRYLIC SIGN</span>
+            <img src="images/download (1).jpg" alt="Acrylic Sign">
+          </div>
+          <div class="carousel-item">
+            <span class="badge">ACRYLIC SIGN</span>
+            <img src="images/download (1).jpg" alt="Acrylic Sign">
+          </div>
+          <div class="carousel-item">
+            <span class="badge">ACRYLIC SIGN</span>
+            <img src="images/download (1).jpg" alt="Acrylic Sign">
+          </div>
+          <div class="carousel-item">
+            <span class="badge">ACRYLIC SIGN</span>
+            <img src="images/download (1).jpg" alt="Acrylic Sign">
+          </div>
+          <!-- Add more items if needed -->
+        </div>
+      </div>
+      <button class="carousel-btn next">&#8594;</button>
+    </div>
+
+    <button class="btn-quote">GET QUOTE</button>
+  </header>
+
+  <section class="main-container">
+    <!-- <h2 class="heading">TRANSFORM YOUR BRAND WITH PREMIUM 3D SIGNAGE.</h2>
+    <p class="subheading">Fill out the form and our managers will contact you</p> -->
+
+    <!-- Tag Buttons -->
+    
+
+    <div class="content">
+      <!-- Left Box -->
+      <div class="info-box">
+        <div class="info-content"> 
+         <div class="tags">
+      
+      <button>ALL SIGNS</button>
+      <button>STOREFRONT</button>
+      <button>3D ACRYLIC</button>
+      <button>3D METAL</button>
+      <button class="active">2D METAL</button>
+      <button>WOODEN</button>
+      <button>NEON</button>
+    </div>
+        <h3>2D METAL SIGNATURE</h3>
+        <p><strong>Size:</strong> Customizable</p>
+        <p><strong>Material:</strong> Stainless Steel</p>
+        <p><strong>Design:</strong> Custom (any logo)</p>
+        <p><strong>Colors:</strong> Multiple finishes</p>
+        <p><strong>Illuminated:</strong> No</p>
+        <p><strong>Contact:</strong> +1(888)-404-4493</p>
+        <p><strong>Email:</strong> info@signmakerz.com</p>
+
+        <div class="examples">
+          <img src="images/download (1).jpg" alt="Example 1">
+          <img src="images/download (2).jpg" alt="Example 2">
+        </div>
+        </div>
+   
+      </div>
+
+      <!-- Form -->
+      <form class="quote-form">
+            <h2 class="heading">TRANSFORM YOUR BRAND WITH PREMIUM 3D SIGNAGE.</h2>
+    <p class="subheading">Fill out the form and our managers will contact you</p>
+        <div class="form-grid">
+          <input type="text" placeholder="Enter Full Name *" required />
+          <input type="email" placeholder="Enter your email *" required />
+          <input type="tel" placeholder="Enter Phone number *" required />
+        </div>
+
+        <!-- Mockup Type -->
+ <div class="mockup-grid">
+  <div class="mockup-card selected" onclick="toggleSelection(this)">
+    <input type="checkbox" class="mockup-checkbox" checked />
+    <div class="mockup-item">
+      <img src="images/mockup1 (1).png" alt="3D Blade Sign">
+      <span>3D BLADE SIGN</span>
+    </div>
+  </div>
+
+  <div class="mockup-card" onclick="toggleSelection(this)">
+    <input type="checkbox" class="mockup-checkbox" />
+    <div class="mockup-item">
+      <img src="images/mockup1 (2).png" alt="Acrylic Front-Lit">
+      <span>ACRYLIC FRONT-LIT</span>
+    </div>
+  </div>
+
+  <div class="mockup-card selected" onclick="toggleSelection(this)">
+    <input type="checkbox" class="mockup-checkbox" checked />
+    <div class="mockup-item">
+      <img src="images/mockup1 (3).png" alt="3D Metal Back-Lit">
+      <span>3D METAL BACK-LIT</span>
+    </div>
+  </div>
+
+  <!-- Add more mockup cards similarly -->
+</div>
+
+
+        <!-- Communication -->
+      <div class="comm-method">
+  <label class="comm-label">Your preferred mode of communication *</label>
+  <div class="comm-options">
+    <input type="radio" id="email" name="comm" />
+    <label for="email">Email</label>
+
+    <input type="radio" id="call" name="comm" />
+    <label for="call">Call</label>
+
+    <input type="radio" id="whatsapp" name="comm" checked />
+    <label for="whatsapp">WhatsApp</label>
+
+    <input type="radio" id="imessage" name="comm" />
+    <label for="imessage">iMessage</label>
+  </div>
+</div>
+
+
+
+        <!-- Details -->
+        <textarea placeholder="Details... (Size, budget, design specs)"></textarea>
+
+        <!-- File Upload -->
+        <div class="upload-area">
+          <label>Upload an Image</label>
+          <div class="upload-box">
+            Drag & drop your file here or <a href="#">choose file</a><br />
+            <small>Max file size: 20MB. Types: .ai, .psd, .pdf, .jpg, .png, .tiff</small>
+          </div>
+          <input type="url" placeholder="URL of your Business / Logo" />
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="submit-btn">GET FREE QUOTES & MOCKUPS</button>
+      </form>
+    </div>
+  </section>
+       <section class="bg-[#1d1d1d] text-white px-6 py-12 md:px-16 md:py-20">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between relative">
+    
+    <!-- Left Content -->
+    <div class="lg:max-w-3xl">
+      <h5 class="text-orange-500 text-sm font-bold uppercase tracking-wide mb-3">Advantages</h5>
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-6">Why Should You Choose SignMakerz?</h2>
+      <p class="text-base md:text-lg leading-relaxed mb-8">
+        Choosing SignMakerz for your 3D signage means investing in a product that boosts your brand’s visibility and appeal.
+        Our custom 3D signs uniquely combine style and innovation, significantly enhancing your business’s presence.
+      </p>
+
+      <!-- Advantage List -->
+      <ul class="space-y-4 text-base md:text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-500 mt-1">✔</span>
+          <span>Customization to Perfectly Match Your Unique Brand Identity</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-500 mt-1">✔</span>
+          <span>Superior Durability and Longevity with High-Quality Materials</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-500 mt-1">✔</span>
+          <span>Improved Visibility and Attention-Grabbing Design for Your Business</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-500 mt-1">✔</span>
+          <span>Comprehensive Expert Support From Concept Through to Installation</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-500 mt-1">✔</span>
+          <span>Environmentally Conscious Options with Energy-Efficient Solutions</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-500 mt-1">✔</span>
+          <span>Competitive Pricing Without Compromising on Quality and Effectiveness</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Floating Star -->
+    <div class="absolute right-0 top-1/2 transform -translate-y-1/2 hidden lg:block">
+      <img src="" alt="star" class="w-12 h-12" />
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- REVIEWS SECTION -->
+  <!-- REVIEWS SECTION -->
+<section class="reviews-section px-4 py-10 bg-white relative overflow-hidden">
+  <h2 class="text-2xl md:text-3xl font-bold mb-6">REVIEWS</h2>
+
+  <!-- Arrows -->
+  <button id="scrollLeft" class="absolute left-2 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-gray-200 hover:bg-gray-300 shadow-md hidden md:flex">
+    &#8592;
+  </button>
+  <button id="scrollRight" class="absolute right-2 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-gray-200 hover:bg-gray-300 shadow-md hidden md:flex">
+    &#8594;
+  </button>
+
+  <!-- Hidden scrollable container -->
+  <div class="relative">
+    <div id="carousel" class="flex gap-4 transition-transform duration-500 ease-in-out" style="transform: translateX(0);">
+      <!-- Card 1 -->
+      <div class="flex-shrink-0 w-[90%] sm:w-[80%] md:w-[45%] lg:w-[33%] bg-gray-100 rounded-lg shadow-md p-4">
+        <img src="images/download (1).jpg" alt="Review 1" class="w-full h-40 object-cover rounded mb-3" />
+        <div class="flex justify-between text-sm text-gray-500">
+          <span class="text-orange-500">★★★★★</span>
+          <span>06 Dec 2023</span>
+        </div>
+        <h4 class="font-bold mt-2">STASHA</h4>
+        <p class="text-sm">The letters came out perfect, the lights look great too. Is exactly what we needed.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="flex-shrink-0 w-[90%] sm:w-[80%] md:w-[45%] lg:w-[33%] bg-gray-100 rounded-lg shadow-md p-4">
+        <img src="images/download (2).jpg" alt="Review 2" class="w-full h-40 object-cover rounded mb-3" />
+        <div class="flex justify-between text-sm text-gray-500">
+          <span class="text-orange-500">★★★★★</span>
+          <span>23 Sep 2023</span>
+        </div>
+        <h4 class="font-bold mt-2">MICHAEL</h4>
+        <p class="text-sm">Outstanding quality and finish. Very impressed and would use again.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="flex-shrink-0 w-[90%] sm:w-[80%] md:w-[45%] lg:w-[33%] bg-gray-100 rounded-lg shadow-md p-4">
+        <img src="images/download.jpg" alt="Review 3" class="w-full h-40 object-cover rounded mb-3" />
+        <div class="flex justify-between text-sm text-gray-500">
+          <span class="text-orange-500">★★★★★</span>
+          <span>18 Aug 2023</span>
+        </div>
+        <h4 class="font-bold mt-2">PAUL</h4>
+        <p class="text-sm">Highly recommended! Smooth experience and excellent service.</p>
+      </div>
+
+      <!-- Add more cards as needed -->
+    </div>
+  </div>
+</section>
+
+<section class="brands">
+  <h2 class="brands-text">BRANDS THAT TRUST US</h2>
+  <div class="brand-logos">
+    <!-- Replace src with actual logo paths -->
+    <img src="images/brand1.jpg" alt="Brand 1" />
+    <img src="images/brand2.png" alt="Brand 2" />
+    <img src="images/brand3.png" alt="Brand 3" />
+    <img src="images/brand1.jpg" alt="Brand 1" />
+    <img src="images/brand2.png" alt="Brand 2" />
+    <img src="images/brand3.png" alt="Brand 3" />
+    <img src="images/brand1.jpg" alt="Brand 1" />
+    <img src="images/brand2.png" alt="Brand 2" />
+    <img src="images/brand3.png" alt="Brand 3" />
+    <img src="images/brand1.jpg" alt="Brand 1" />
+    <img src="images/brand2.png" alt="Brand 2" />
+    <img src="images/brand3.png" alt="Brand 3" />
+    <img src="images/brand1.jpg" alt="Brand 1" />
+    <img src="images/brand2.png" alt="Brand 2" />
+    <img src="images/brand3.png" alt="Brand 3" />
+    <img src="images/brand1.jpg" alt="Brand 1" />
+    <img src="images/brand2.png" alt="Brand 2" />
+    <img src="images/brand3.png" alt="Brand 3" />
+    <img src="images/brand1.jpg" alt="Brand 1" />
+    <img src="images/brand2.png" alt="Brand 2" />
+    <img src="images/brand3.png" alt="Brand 3" />
+    <img src="images/brand1.jpg" alt="Brand 1" />
+    <img src="images/brand2.png" alt="Brand 2" />
+    <img src="images/brand3.png" alt="Brand 3" />
+    <img src="images/brand1.jpg" alt="Brand 1" />
+    <img src="images/brand2.png" alt="Brand 2" />
+    <img src="images/brand3.png" alt="Brand 3" />
+    <img src="images/brand1.jpg" alt="Brand 1" />
+    <img src="images/brand2.png" alt="Brand 2" />
+    <img src="images/brand3.png" alt="Brand 3" />
+    <img src="images/brand1.jpg" alt="Brand 1" />
+    <img src="images/brand2.png" alt="Brand 2" />
+    <img src="images/brand3.png" alt="Brand 3" />
+    <img src="images/brand1.jpg" alt="Brand 1" />
+    <img src="images/brand2.png" alt="Brand 2" />
+    <img src="images/brand3.png" alt="Brand 3" />
+    <img src="images/brand1.jpg" alt="Brand 1" />
+    <img src="images/brand2.png" alt="Brand 2" />
+    <img src="images/brand3.png" alt="Brand 3" />
+    <img src="images/brand1.jpg" alt="Brand 1" />
+    <img src="images/brand2.png" alt="Brand 2" />
+    <img src="images/brand3.png" alt="Brand 3" />
+    <!-- Add more logos as needed -->
+  </div>
+</section>
+
+<section class="timeline">
+  <h2 class="text">ORDER TIMELINE</h2>
+  <p class="subtext">Our company ensures global delivery of products within a 10-day timeframe.</p>
+  <div class="timeline-cards">
+    <div class="timeline-card">
+      <p class="day">DAY 1</p>
+      <img src="images/accelerate.svg" alt="Inquiry Icon" />
+      <h3>INQUIRY & QUOTATION</h3>
+    </div>
+    <div class="timeline-card">
+      <p class="day">DAY 2</p>
+      <img src="images/accelerate.svg" alt="Confirmation Icon" />
+      <h3>CONFIRMATION & PAYMENT</h3>
+    </div>
+    <div class="timeline-card">
+      <p class="day">DAY 3–10</p>
+      <img src="images/accelerate.svg" alt="Production Icon" />
+      <h3>PRODUCTION & PACKING</h3>
+    </div>
+    <div class="timeline-card">
+      <p class="day">DAY 10–15</p>
+      <img src="images/accelerate.svg" alt="Delivery Icon" />
+      <h3>SHIPPING & DELIVERY</h3>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="faq-left">
+    <h2>FAQ</h2>
+    <p>If you did not find the answer to your question here, you can contact us through contacts</p>
+    <button class="contact-btn">CONTACT</button>
+  </div>
+
+  <div class="faq-right">
+    <div class="faq-item open">
+      <div class="faq-question active">
+        <span>HOW ARE THE LETTERS INSTALLED?</span>
+        <button class="toggle">−</button>
+      </div>
+      <div class="faq-answer">
+        <p>
+          For quick and easy mounting, we offer pre-mounted product variants on rails or backplates. 
+          Single letters without background need to be mounted and wired individually, for which we 
+          recommend the use of a professional technician. You can also book this service directly 
+          with Signmakers – to make an appointment please <a href="#">contact</a> our support team!
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>NEED FOR BACKGROUND DURING INSTALLATION?</span>
+        <button class="toggle">+</button>
+      </div>
+      <div class="faq-answer">
+        <p>Background is optional but recommended for faster and more secure installation.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>AVAILABLE MATERIALS FOR SIGNAGE?</span>
+        <button class="toggle">+</button>
+      </div>
+      <div class="faq-answer">
+        <p>We offer materials like acrylic, aluminum, stainless steel, and PVC.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>TYPICAL DEPTH OF THE LETTERS?</span>
+        <button class="toggle">+</button>
+      </div>
+      <div class="faq-answer">
+        <p>Depth ranges from 20mm to 100mm depending on material and design.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>HOW TO ENSURE MINIMAL VISIBILITY DURING INSTALLATION?</span>
+        <button class="toggle">+</button>
+      </div>
+      <div class="faq-answer">
+        <p>Use flush mounts, concealed wiring, and background plates for a cleaner look.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-col logo">
+      <img src="images/logo.png" alt="Logo" class="main-logo"/>
+      <p>
+        Explore the world of signage solutions with our company, specializing in creating eye-catching 
+        and innovative signs tailored to your brand.
+      </p>
+      <img src="images/card.jpg" alt="Logo"class="payment-logos" />
+      <img src="images/card.jpg" alt="Logo"class="payment-logos" />
+      <img src="images/card.jpg" alt="Logo"class="payment-logos" />
+      <img src="images/card.jpg" alt="Logo"class="payment-logos" />
+      <img src="images/card.jpg" alt="Logo" class="payment-logos"/>
+      <img src="images/card.jpg" alt="Logo" class="payment-logos"/>
+
+      <small class="shopify">Powered by Shopify</small>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li>Make your Design</li>
+        <li>Get a Quote</li>
+        <li>Get Help</li>
+        <li>Blog</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Documents</h4>
+      <ul>
+        <li>Terms of Service</li>
+        <li>Refund Policy</li>
+        <li>Privacy Policy</li>
+        <li>Certificates</li>
+      </ul>
+    </div>
+
+    <div class="footer-col contact-info">
+      <h4>Contact info</h4>
+      <p>Info@signmakerz.com</p>
+      <p>+1 (888)-404-4483</p>
+      <div class="socials">
+        <!-- Insert your social icons here -->
+        <span>📷</span><span>📘</span><span>🐦</span><span>📌</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <small>©2024 SignMakerz. All rights reserved</small>
+  </div>
+ <elevenlabs-convai agent-id="agent_1801k6mprs28e59vt6rg1z6hq7e7"></elevenlabs-convai>
+
+</footer>
+
+
+
+<script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript">
+  
+  const carousel = document.getElementById('carousel');
+  const scrollLeftBtn = document.getElementById('scrollLeft');
+  const scrollRightBtn = document.getElementById('scrollRight');
+
+  let currentIndex = 0;
+  const cardWidth = () => carousel.children[0].offsetWidth + 16; // card width + margin
+  const totalCards = carousel.children.length;
+
+  scrollLeftBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateTransform();
+    }
+  });
+
+  scrollRightBtn.addEventListener('click', () => {
+    if (currentIndex < totalCards - 1) {
+      currentIndex++;
+      updateTransform();
+    }
+  });
+
+  function updateTransform() {
+    const x = -(cardWidth() * currentIndex);
+    carousel.style.transform = `translateX(${x}px)`;
+  }
+
+  // Optional: Enable arrows only on desktop
+  const mediaQuery = window.matchMedia('(min-width: 768px)');
+  function toggleArrows() {
+    const visible = mediaQuery.matches;
+    scrollLeftBtn.style.display = visible ? 'flex' : 'none';
+    scrollRightBtn.style.display = visible ? 'flex' : 'none';
+  }
+  toggleArrows();
+mediaQuery.addEventListener('change', toggleArrows);
+
+   const AGENT_ID = 'agent_1801k6mprs28e59vt6rg1z6hq7e7';
+
+// OPTIONAL: Change navigation behavior
+const OPEN_IN_NEW_TAB = true; // true = new tab, false = same tab
+
+// OPTIONAL: Change widget position
+const WIDGET_POSITION = 'bottom-right'; // 'bottom-right', 'bottom-left', 'top-right', 'top-left'
+
+// OPTIONAL: Base URL for navigation (leave empty for auto-detection)
+const BASE_URL = 'http://127.0.0.1:5500/'; // e.g., 'https://mysite.framer.app' or 'https://mysite.wixsite.com/mysite'
+
+// ============================================================================
+// DON'T CHANGE ANYTHING BELOW THIS LINE
+// ============================================================================
+
+// Create and inject the widget with client tools
+function injectElevenLabsWidget() {
+  const ID = 'elevenlabs-convai-widget';
+  
+  // Check if the widget is already loaded
+  if (document.getElementById(ID)) {
+    return;
+  }
+
+  // Create widget script
+  const script = document.createElement('script');
+  script.src = 'https://unpkg.com/@elevenlabs/convai-widget-embed';
+  script.async = true;
+  script.type = 'text/javascript';
+  document.head.appendChild(script);
+
+  // Create wrapper and widget
+  const wrapper = document.createElement('div');
+  wrapper.className = `convai-widget ${WIDGET_POSITION}`;
+
+  const widget = document.createElement('elevenlabs-convai');
+  widget.id = ID;
+  widget.setAttribute('agent-id', AGENT_ID);
+  widget.setAttribute('variant', 'full');
+
+  // Listen for the widget's "call" event to inject client tools
+  widget.addEventListener('elevenlabs-convai:call', (event) => {
+    event.detail.config.clientTools = {
+      Mockup_Quote: ({ url }) => {
+        console.log('redirectToExternalURL called with url:', url);
+        
+        // Build full URL - handles any base URL
+        let fullUrl = url;
+        if (!url.startsWith('http')) {
+          // Use custom base URL if provided, otherwise auto-detect
+          const baseUrl = BASE_URL || window.location.origin + window.location.pathname.replace(/\/[^\/]*$/, '');
+          fullUrl = `${baseUrl}${url.startsWith('/') ? '' : '/'}${url}`;
+        }
+        
+        console.log('Navigating to:', fullUrl);
+         
+        // Navigate based on config
+        if (OPEN_IN_NEW_TAB) {
+          window.open(fullUrl, '_blank', 'noopener,noreferrer');
+        } else {
+          window.location.href = fullUrl;
+        }
+      },
+    };
+  });
+
+  // Attach widget to the DOM
+  wrapper.appendChild(widget);
+  document.body.appendChild(wrapper);
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', injectElevenLabsWidget);
+} else {
+  injectElevenLabsWidget();
+}
+</script>
+
+</body>
+</html>
