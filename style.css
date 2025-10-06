@@ -1,0 +1,1020 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #fff;
+  color: #222;
+}
+
+.hero {
+  background: #1e1e1e;
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.announcement {
+  color: #ff5c36;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  flex: 0 0 270px;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  margin: 0 10px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ffffff;
+  color: #000;
+  font-size: 0.75rem;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.carousel-btn {
+  background: #ff5a3c;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+  background: #e34a2f;
+}
+
+.btn-quote {
+  margin-top: 2.5rem;
+  padding: 0.9rem 2.2rem;
+  background-color: #ff5a3c;
+  border: none;
+  color: white;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-quote:hover {
+  background-color: #e34a2f;
+}
+
+.form-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.form-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.quote-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 1rem auto;
+}
+
+.quote-form input {
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.tags button {
+  background: white;
+  border: 1px solid #ff5c36;
+  color: #ff5c36;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.tags .active {
+  background: #ff5c36;
+  color: white;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  color: #222;
+}
+
+.main-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.heading {
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.subheading {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.tags button {
+  background: white;
+  border: 1px solid #ff5c36;
+  color: #ff5c36;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.tags .active {
+  background: #ff5c36;
+  color: white;
+}
+
+.content {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.info-box {
+  flex: 1 1 300px;
+  border: 1px solid #eee;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-width: 0;
+}
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .info-box {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+.tags button {
+  border: 1px solid #ff5a3c;
+  background: white;
+  color: black;
+  padding: 5px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.info-content {
+  margin: 4rem 1rem; /* top/bottom margin, side padding */
+}
+
+@media (min-width: 768px) {
+  .info-content {
+    margin: 6rem 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .info-content {
+    margin-left: 15rem;
+    margin-top: 10rem;
+  }
+}
+
+.tags button.active {
+  background-color: #ff5a3c;
+  color: white;
+}
+.examples {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.examples img {
+  width: 170px;
+  height: auto;
+  border-radius: 6px;
+}
+
+.quote-form {
+  flex: 2;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.form-grid input {
+  flex: 1;
+  min-width: 250px;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.mockup-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Entire card including selection logic */
+.mockup-card {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+
+.mockup-card.selected {
+  border-color: #ff5e3a;
+}
+
+/* Mockup item styling inside card */
+.mockup-item {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.mockup-item img {
+  width: 100%;
+  border-radius: 6px;
+  height: auto;
+}
+
+.mockup-item span {
+  display: block;
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Custom checkbox styling */
+.mockup-checkbox {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 18px;
+  height: 18px;
+  appearance: none;
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.mockup-checkbox:checked {
+  background-color: #ff5e3a;
+  border-color: #ff5e3a;
+}
+
+/* Responsive layout */
+@media (min-width: 600px) {
+  .mockup-card {
+    width: calc(50% - 1rem);
+  }
+}
+
+@media (min-width: 900px) {
+  .mockup-card {
+    width: calc(33.333% - 1rem);
+  }
+}
+.mockup-card.selected .mockup-item {
+  background-color: #f3b0b0;
+  color: white;
+}
+
+.mockup-card.selected .mockup-item span {
+  color: white;
+}
+
+.comm-method label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.comm-options {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.comm-options label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+}
+.comm-method .comm-label {
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: #333;
+}
+
+.comm-options {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Hide the native radio */
+.comm-options input[type="radio"] {
+  display: none;
+}
+
+/* Base label style */
+.comm-options label {
+  padding: 0.75rem 1.5rem;
+  /* border: 1.5px solid #ff5a3c; */
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #333;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+/* Checkbox style (before text) */
+.comm-options label::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid #ff5a3c;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+/* When checked: highlight label + show checkmark */
+.comm-options input[type="radio"]:checked + label {
+  background-color: #ff5a3c;
+  color: white;
+}
+
+/* Add checkmark inside box when checked */
+.comm-options input[type="radio"]:checked + label::before {
+  content: "✔";
+  color: white;
+  background-color: #ff5a3c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  border-color: white;
+}
+
+
+textarea {
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  min-height: 100px;
+  resize: vertical;
+}
+
+.upload-area label {
+  font-weight: bold;
+}
+
+.upload-box {
+  border: 2px dashed #ccc;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.upload-box a {
+  color: #ff5c36;
+  text-decoration: underline;
+}
+
+.upload-area input[type="url"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.submit-btn {
+  background-color: #ff5c36;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.why-section {
+  background: #1e1e1e;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  position: relative;
+}
+
+.why-content {
+  max-width: 60%;
+}
+
+.subtitle {
+  color: #ff5a3c;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.why-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+
+.why-center {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns content to the left inside the box */
+  margin-left: 15rem;       /* Pushes the container to the right */
+  margin-right: 2rem;      /* Adds space from the right edge */
+  max-width: 700px;
+}
+
+
+.why-center p {
+  max-width: 700px;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0.75rem 0;
+}
+
+.advantages-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 700px;
+  text-align: left;
+}
+
+.advantages-list li {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.advantages-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #ff5a3c;
+  font-weight: bold;
+}
+
+.star-image {
+  font-size: 4rem;
+  align-self: center;
+  margin-left: 2rem;
+}
+
+/* REVIEWS SECTION */
+.reviews-section {
+  background: #fff;
+  padding: 2rem;
+  /* text-align: center; */
+}
+
+.reviews-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.reviews-carousel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.reviews-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: fit-content;
+}
+
+/* Base - mobile */
+.review-card {
+  flex: 0 0 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 0 10px;
+  padding: 1rem;
+  text-align: left;
+}
+
+/* Medium screens (2 full cards) */
+@media (min-width: 768px) {
+  .review-card {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
+}
+
+/* Large screens (2.5 cards) */
+@media (min-width: 1024px) {
+  .review-card {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+}
+
+/* Optional max height and text wrapping fix */
+.review-card p {
+  white-space: normal;
+  overflow-wrap: break-word;
+  line-height: 1.5;
+}
+
+.review-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.stars {
+  color: orange;
+  font-size: 1.2rem;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.arrow-btn {
+  background: #ff5a3c;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/* Mobile fallback: single stacked card view */
+@media (max-width: 480px) {
+  .reviews-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .reviews-carousel {
+    width: 100%;
+    overflow: visible;
+  }
+
+  .reviews-track {
+    flex-direction: column;
+    align-items: center;
+    transform: none !important;
+  }
+
+  .review-card {
+    width: 90%;
+    margin: 0 auto 1rem auto;
+  }
+
+  .arrow-btn {
+    display: none;
+  }
+}
+
+
+.brands .brands-text{
+  
+  color: #070606;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 5rem;
+  
+}
+
+.brand-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.brand-logos img {
+  height: 60px;
+  max-width: 190px;
+  object-fit: contain;
+}
+.timeline .text {
+  margin-bottom: 70px;
+  color: #181818;
+  align-items: center;
+  justify-content: center;
+  padding-left: 900px;
+}
+
+.timeline .subtext {
+  margin-bottom: 170px;
+  color: #777;
+  align-items: center;
+  justify-content: center;
+  padding-left: 750px;
+}
+
+.timeline-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.timeline-card {
+      background: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #00000054;
+}
+
+.timeline-card .day {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ff5722;
+}
+
+.timeline-card img {
+  width: 40px;
+  height: 40px;
+  margin: 10px 0;
+}
+
+.faq-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px;
+  gap: 60px;
+}
+
+.faq-left {
+  flex: 1;
+}
+
+.faq-left h2 {
+  font-size: 28px;
+}
+
+.contact-btn {
+  margin-top: 20px;
+  background-color: #ff4b2b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.faq-right {
+  flex: 2;
+  max-width: 700px;
+}
+
+.faq-item {
+  border-top: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.faq-question span {
+  flex-grow: 1;
+}
+
+.faq-question .toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.faq-answer {
+  display: none;
+  padding-top: 10px;
+  color: #555;
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+.faq-item.open .toggle {
+  content: "−";
+}
+
+.footer {
+  background-color: #1a1a1a;
+  color: #ccc;
+  padding: 40px 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-col h4 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.logo img {
+  width: 100px;
+  margin-bottom: 10px;
+}
+.main-logo {
+  max-width: 120px; /* Adjust for your layout */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.payment-logos {
+  max-width: 55px;  /* Keep it small and tidy */
+  height: auto;
+  margin: 10px 0 5px;
+  
+}
+
+.socials span {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #666;
+}
+.shopify{
+  display: block;
+}
+@media (max-width: 600px) {
+  .carousel-item {
+    flex: 0 0 80%;
+    margin: 0 auto;
+  }
+}
+
+/* Add smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Highlight selected form field on focus */
+input:focus, textarea:focus {
+  border-color: #ff5c36;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 92, 54, 0.5);
+}
+
+/* Style for disabled button state */
+button:disabled,
+.submit-btn:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+/* Add hover effect for buttons */
+button:hover,
+.btn-quote:hover,
+.submit-btn:hover,
+.contact-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Style for error messages */
+.error-message {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Style for success message */
+.success-message {
+  color: green;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* Loader spinner */
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #ff5c36;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: 10px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* Fix overly padded brand and timeline section headers */
+.brands .brands-text,
+.timeline .text,
+.timeline .subtext {
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* Responsive fix for large white space on small screens */
+body {
+  overflow-x: hidden;
+}
+
+.brands, .timeline {
+  padding: 2rem 1rem;
+}
+
+/* Ensure texts center properly on mobile */
+@media (max-width: 768px) {
+  .brands .brands-text,
+  .timeline .text,
+  .timeline .subtext {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .timeline .subtext {
+    font-size: 0.9rem;
+  }
+
+  .brand-logos,
+  .timeline-cards {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .timeline-card {
+    width: 90%;
+  }
+}
